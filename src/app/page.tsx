@@ -1,4 +1,4 @@
-import Phone from "@/components/phone";
+import Phone from "@/components/phone/phone";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
