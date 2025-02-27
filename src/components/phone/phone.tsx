@@ -1,8 +1,9 @@
 import Image from "next/image";
 import PhoneDescription from "./phone-description";
 import PhoneHeader from "./phone-header";
+import PhonePosts from "./phone-posts";
 import PhoneStats from "./phone-stats";
-import PhoneStory from "./phone-story";
+import PhoneStory from "./phone-storys";
 
 function Phone() {
   return (
@@ -20,11 +21,12 @@ function Phone() {
         <div className="absolute top-[2%] left-[5%] w-[90%] h-[96%] rounded-[30px] overflow-hidden z-0 bg-black">
           <div className="w-full h-full relative flex flex-col">
             <PhoneHeader />
-            <div className="flex flex-col gap-6 px-4">
+            <div className="flex flex-col gap-4 px-4">
               <PhoneStats />
               <PhoneDescription />
               <PhoneStory />
             </div>
+            <PhonePosts />
           </div>
         </div>
       </div>
