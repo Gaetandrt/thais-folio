@@ -1,3 +1,4 @@
+import Phone from "@/components/phone";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
@@ -65,7 +66,9 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="relative w-2/5 h-3/4"></div>
+        <div className="relative w-3/5 h-3/4">
+          <Phone />
+        </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
