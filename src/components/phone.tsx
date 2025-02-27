@@ -14,21 +14,31 @@ function Phone() {
         <div className="absolute top-[2%] left-[5%] w-[90%] h-[96%] bg-background rounded-[30px] overflow-hidden z-0">
           <div className="w-full h-full relative flex flex-col">
             {/* Header du téléphone */}
-            <header className="w-full h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 shrink-0">
+            <header className="w-full h-16 bg-black border-b border-gray-200 flex items-center justify-between px-4 shrink-0">
               <div className="flex items-center p-4">
-                <span className="font-medium text-gray-800">
+                <span className="font-medium">
                   {new Date().toLocaleTimeString().slice(0, 5)}
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-gray-800 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
-                <div className="w-4 h-4 flex flex-col justify-center gap-[2px]">
-                  <div className="w-full h-[2px] bg-gray-800 rounded-full"></div>
-                  <div className="w-full h-[2px] bg-gray-800 rounded-full"></div>
-                  <div className="w-full h-[2px] bg-gray-800 rounded-full"></div>
-                </div>
+                <Image
+                  src="/phone-cellular.svg"
+                  alt="wifi"
+                  width={18}
+                  height={18}
+                />
+                <Image
+                  src="/phone-wifi.svg"
+                  alt="wifi"
+                  width={18}
+                  height={18}
+                />
+                <Image
+                  src="/phone-battery.svg"
+                  alt="wifi"
+                  width={26}
+                  height={26}
+                />
               </div>
             </header>
 
