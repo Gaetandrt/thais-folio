@@ -27,6 +27,15 @@ function Phone() {
               <PhoneStory />
             </div>
             <PhonePosts />
+            <div className="absolute -bottom-2 left-0 w-full h-10 flex items-center justify-center">
+              <Image
+                src="/phone-home.svg"
+                alt="phone-home"
+                width={120}
+                height={5}
+                className="object-contain pointer-events-none"
+              />
+            </div>
           </div>
         </div>
       </div>
