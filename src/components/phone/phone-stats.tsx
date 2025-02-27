@@ -2,14 +2,14 @@ import Image from "next/image";
 
 function PhoneStats() {
   return (
-    <div className="flex-1">
+    <>
       {/* Header du profil avec nom d'utilisateur */}
       <div className="flex items-center justify-center">
         <h2 className="text-lg font-semibold">thaïsbouzar</h2>
       </div>
 
       {/* Section profil avec photo et statistiques */}
-      <div className="flex items-center px-4 py-2">
+      <div className="flex items-center">
         {/* Photo de profil */}
         <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-pink-500/50 p-[2px]">
           <div className="w-full h-full rounded-full overflow-hidden">
@@ -38,7 +38,7 @@ function PhoneStats() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PhoneDescription from "./phone-description";
 import PhoneHeader from "./phone-header";
 import PhoneStats from "./phone-stats";
 
@@ -18,7 +19,10 @@ function Phone() {
         <div className="absolute top-[2%] left-[5%] w-[90%] h-[96%] rounded-[30px] overflow-hidden z-0 bg-black">
           <div className="w-full h-full relative flex flex-col">
             <PhoneHeader />
-            <PhoneStats />
+            <div className="flex flex-col gap-4 px-4">
+              <PhoneStats />
+              <PhoneDescription />
+            </div>
           </div>
         </div>
       </div>
