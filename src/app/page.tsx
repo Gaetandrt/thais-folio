@@ -49,7 +49,7 @@ export default function Home() {
             <h1 className="font-bold font-stretch-50%">BONJOUR !</h1>
             <div className="flex flex-col gap-2 text-3xl">
               <p>
-                Je m'appelle{" "}
+                Je m&apos;appelle{" "}
                 <span className="bg-gradient-to-r from-[#529AFA] to-[#9747FF] bg-clip-text text-transparent font-bold font-stretch-50% text-4xl">
                   THAIS
                 </span>
@@ -57,7 +57,7 @@ export default function Home() {
               <p>
                 Étudiante à{" "}
                 <span className="font-bold font-stretch-50% text-4xl">
-                  SUP DE COM'
+                  SUP DE COM&apos;
                 </span>
               </p>
             </div>
