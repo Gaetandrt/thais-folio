@@ -14,7 +14,7 @@ function PhoneStats() {
         <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-pink-500/50 p-[2px]">
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
-              src="/thais.png"
+              src="/gros-bg.png"
               alt="Photo de profil"
               fill
               className="object-cover"
