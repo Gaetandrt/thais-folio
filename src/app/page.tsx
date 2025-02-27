@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="w-full h-screen">
-      <main className="relative flex items-center gap-36 justify-between h-screen w-full p-32">
+      <main className="relative flex items-center gap-36 justify-between h-screen w-full 2xl:p-10 p-32">
         {/* Banderole défilante */}
         <div className="absolute bottom-1/4 left-0 right-0 w-full overflow-hidden -z-10">
           <div className="whitespace-nowrap animate-marquee flex items-center">
