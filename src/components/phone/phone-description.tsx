@@ -1,11 +1,23 @@
+import { Button } from "../ui/button";
+
 function PhoneDescription() {
   return (
-    <div className="flex flex-col">
-      <h2 className="font-bold mb-2">Thaïs</h2>
-      <p className="text-[14px]">📱 COM / 🖌️ DESIGN / 🏃‍♀️ RUN</p>
-      <p className="text-[14px]">
-        Je maitrise Figma, DaVinci, Adobe Illustrator, Capcut et Canva !
-      </p>
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col">
+        <h2 className="font-bold mb-2">Thaïs</h2>
+        <p className="text-[14px]">📱 COM / 🖌️ DESIGN / 🏃‍♀️ RUN</p>
+        <p className="text-[14px]">
+          Je maitrise Figma, DaVinci, Adobe Illustrator, Capcut et Canva !
+        </p>
+      </div>
+      <div className="flex gap-2 w-full">
+        <Button className="w-full">
+          <p>NE CLIQUEZ PAS</p>
+        </Button>
+        <Button variant={"outline"} className="w-full">
+          <p>M&apos;ECRIRE</p>
+        </Button>
+      </div>
     </div>
   );
 }
