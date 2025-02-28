@@ -2,8 +2,6 @@ import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
-type Props = {};
-
 function Home() {
   return (
     <div className="w-full h-full gap-10 flex items-center justify-center">

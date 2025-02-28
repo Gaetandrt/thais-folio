@@ -16,8 +16,8 @@ function PhoneDescription({ setPage }: PhoneDescriptionProps) {
         </p>
       </div>
       <div className="flex gap-2 w-full">
-        <Button className="w-full">
-          <p>NE CLIQUEZ PAS</p>
+        <Button className="w-full" onClick={() => setPage("categories")}>
+          <p>PORTFOLIO</p>
         </Button>
         <Button
           variant={"outline"}

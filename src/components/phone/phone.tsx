@@ -30,7 +30,7 @@ function Phone({ setPage, page }: PhoneProps) {
             <div className="flex flex-col gap-4 px-4">
               <PhoneStats page={page} setPage={setPage} />
               <PhoneDescription setPage={setPage} />
-              <PhoneStory />
+              <PhoneStory setPage={setPage} />
             </div>
             <PhonePosts />
             <div className="absolute -bottom-2 left-0 w-full h-10 flex items-center justify-center">
