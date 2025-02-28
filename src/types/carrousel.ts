@@ -1,8 +1,7 @@
 type SlideData = {
   id: number;
   image: string;
-  title: string;
-  subtitle: React.ReactNode[];
+  content: React.ReactNode[];
   buttonText?: string;
 };
 

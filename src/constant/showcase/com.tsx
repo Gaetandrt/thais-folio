@@ -7,8 +7,8 @@ export const comData: CategoryData = {
     {
       id: 1,
       image: "/showcase/com/cambio-main.png",
-      title: "CAFÉ CAMBIO",
-      subtitle: [
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">CAFÉ CAMBIO</h2>,
         <>
           Pendant mon séjour au{" "}
           <span className="bg-gradient-to-r from-[#FF6B6B] to-[#FFE66D] bg-clip-text text-transparent font-bold font-stretch-50% text-4xl">
@@ -27,8 +27,8 @@ export const comData: CategoryData = {
     {
       id: 2,
       image: "/showcase/com/cambio-insta.png",
-      title: "MES MISSIONS",
-      subtitle: [
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">MES MISSIONS</h2>,
         <>
           <ul className="list-disc ml-10 space-y-2 text-[26px]">
             <li>
@@ -52,8 +52,10 @@ export const comData: CategoryData = {
     {
       id: 3,
       image: "/showcase/com/cambio-reach.png",
-      title: "LES RÉSULTATS - AUDIENCE, VISITES ET FOLLOWERS",
-      subtitle: [
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          LES RÉSULTATS - AUDIENCE, VISITES ET FOLLOWERS
+        </h2>,
         <p>
           Sur Facebook, une augmentation de{" "}
           <span className="bg-gradient-to-r from-[#FF6B6B] to-[#FFE66D] bg-clip-text text-transparent font-bold font-stretch-50% text-4xl">
@@ -69,8 +71,7 @@ export const comData: CategoryData = {
     {
       id: 4,
       image: "/showcase/com/cambio-strategy.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">
           STRATÉGIE DE CONTENU -{" "}
           <span className="font-light">LES 20 ANS DE CAFÉ CAMBIO</span>
@@ -79,20 +80,19 @@ export const comData: CategoryData = {
           Voici un exemple de contenu faisant partie de la stratégie des 20ans.
         </p>,
         <p className="text-sm mt-4">
-          Il s’agit ici d’un post “nostalgie” qui a été publié sur Instagram.
+          Il s'agit ici d'un post "nostalgie" qui a été publié sur Instagram.
         </p>,
       ],
     },
     {
       id: 5,
       image: "/showcase/com/cambio-strategy-result.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">
           STRATÉGIE DE CONTENU -{" "}
           <span className="font-light">LES RÉSULTATS</span>
         </h2>,
-        <p>Beaucoups d’interactions (106) et d’audience (5,1K)</p>,
+        <p>Beaucoups d'interactions (106) et d'audience (5,1K)</p>,
         <p className="text-sm mt-4">
           Nous sommes actuellement en pleine mise en action de la stratégie. Les
           résulats finaux ne sont pas encore disponible !
@@ -102,26 +102,38 @@ export const comData: CategoryData = {
     {
       id: 6,
       image: "/showcase/com/cambio-showcase-1.png",
-      title: "GALERIE DE PHOTOS",
-      subtitle: [],
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          GALERIE DE PHOTOS
+        </h2>,
+      ],
     },
     {
       id: 7,
       image: "/showcase/com/cambio-showcase-2.png",
-      title: "GALERIE DE PHOTOS",
-      subtitle: [],
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          GALERIE DE PHOTOS
+        </h2>,
+      ],
     },
     {
       id: 8,
       image: "/showcase/com/cambio-showcase-3.png",
-      title: "GALERIE DE PHOTOS",
-      subtitle: [],
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          GALERIE DE PHOTOS
+        </h2>,
+      ],
     },
     {
       id: 9,
       image: "/showcase/com/cambio-showcase-4.png",
-      title: "GALERIE DE PHOTOS",
-      subtitle: [],
+      content: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          GALERIE DE PHOTOS
+        </h2>,
+      ],
     },
   ],
 };

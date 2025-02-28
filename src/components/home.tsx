@@ -13,7 +13,7 @@ function Home() {
           alt="Thaïs Bouzard"
         />
       </div>
-      <div className="flex flex-col gap-10 text-5xl">
+      <div className="flex flex-col gap-10 text-5xl w-full 2xl:w-[400px]">
         <h1 className="font-bold font-stretch-50%">BONJOUR !</h1>
         <div className="flex flex-col gap-2 text-3xl">
           <p>
@@ -29,7 +29,7 @@ function Home() {
             </span>
           </p>
         </div>
-        <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-default hover:border-none font-bold">
+        <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-default hover:border-none font-bold w-2/3">
           UTILISES MON SMARTPHONE ! <MoveRight />
         </Button>
       </div>

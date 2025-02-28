@@ -7,8 +7,7 @@ export const designData: CategoryData = {
     {
       id: 1,
       image: "/showcase/design/design-zoe.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">GLACIER ZOÉ</h2>,
         <p>Projet fictif</p>,
       ],
@@ -16,8 +15,7 @@ export const designData: CategoryData = {
     {
       id: 2,
       image: "/showcase/design/design-zoe-2.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">GLACIER ZOÉ</h2>,
         <p>Projet fictif</p>,
       ],
@@ -25,8 +23,7 @@ export const designData: CategoryData = {
     {
       id: 3,
       image: "/showcase/design/design-mc-gordes.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">
           MC GORDES - <span className="font-light">LOGO</span>
         </h2>,
@@ -36,8 +33,7 @@ export const designData: CategoryData = {
     {
       id: 4,
       image: "/showcase/design/design-mc-gordes-mob.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">
           MC GORDES - <span className="font-light">AFFICHE</span>
         </h2>,
@@ -47,8 +43,7 @@ export const designData: CategoryData = {
     {
       id: 5,
       image: "/showcase/design/design-mc-gordes-training.png",
-      title: "",
-      subtitle: [
+      content: [
         <h2 className="text-4xl font-bold font-stretch-50%">
           MC GORDES - <span className="font-light">AFFICHE</span>
         </h2>,
