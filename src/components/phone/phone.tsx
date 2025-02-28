@@ -1,3 +1,4 @@
+import { pageList } from "@/constant/constant";
 import Image from "next/image";
 import PhoneDescription from "./phone-description";
 import PhoneHeader from "./phone-header";
@@ -5,7 +6,12 @@ import PhonePosts from "./phone-posts";
 import PhoneStats from "./phone-stats";
 import PhoneStory from "./phone-storys";
 
-function Phone() {
+type PhoneProps = {
+  setPage: (page: (typeof pageList)[number]) => void;
+  page: (typeof pageList)[number];
+};
+
+function Phone({ setPage, page }: PhoneProps) {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       <div className="relative w-[408px] h-[829px]">
@@ -22,8 +28,8 @@ function Phone() {
           <div className="w-full h-full relative flex flex-col">
             <PhoneHeader />
             <div className="flex flex-col gap-4 px-4">
-              <PhoneStats />
-              <PhoneDescription />
+              <PhoneStats page={page} setPage={setPage} />
+              <PhoneDescription setPage={setPage} />
               <PhoneStory />
             </div>
             <PhonePosts />

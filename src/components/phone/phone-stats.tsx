@@ -1,6 +1,13 @@
+import { pageList } from "@/constant/constant";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-function PhoneStats() {
+type PhoneStatsProps = {
+  setPage: (page: (typeof pageList)[number]) => void;
+  page: (typeof pageList)[number];
+};
+
+function PhoneStats({ setPage, page }: PhoneStatsProps) {
   return (
     <>
       {/* Header du profil avec nom d'utilisateur */}
@@ -17,7 +24,11 @@ function PhoneStats() {
               src="/gros-bg.png"
               alt="Photo de profil"
               fill
-              className="object-cover"
+              className={cn(
+                "object-cover",
+                page !== "home" && "cursor-pointer"
+              )}
+              onClick={() => setPage("home")}
             />
           </div>
         </div>

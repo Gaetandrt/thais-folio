@@ -1,6 +1,11 @@
+import { pageList } from "@/constant/constant";
 import { Button } from "../ui/button";
 
-function PhoneDescription() {
+type PhoneDescriptionProps = {
+  setPage: (page: (typeof pageList)[number]) => void;
+};
+
+function PhoneDescription({ setPage }: PhoneDescriptionProps) {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col">
@@ -14,7 +19,11 @@ function PhoneDescription() {
         <Button className="w-full">
           <p>NE CLIQUEZ PAS</p>
         </Button>
-        <Button variant={"outline"} className="w-full">
+        <Button
+          variant={"outline"}
+          className="w-full"
+          onClick={() => setPage("contact")}
+        >
           <p>M&apos;ECRIRE</p>
         </Button>
       </div>
