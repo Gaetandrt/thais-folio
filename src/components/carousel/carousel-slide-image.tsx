@@ -9,6 +9,10 @@ interface CarouselSlideImageProps {
   direction: number;
 }
 
+/**
+ * Carousel slide image component
+ * Displays an image with smooth animations when transitioning between slides
+ */
 export function CarouselSlideImage({
   src,
   alt,
@@ -20,8 +24,8 @@ export function CarouselSlideImage({
   // Update animation distance based on screen width
   useEffect(() => {
     const updateAnimationDistance = () => {
-      // Use screen width + 20% to ensure element fully extends
-      const distance = Math.max(window.innerWidth, 1200);
+      // Use screen width + 20% to ensure element fully extends beyond viewport
+      const distance = Math.max(window.innerWidth * 1.2, 1200);
       setAnimationDistance(distance);
     };
 

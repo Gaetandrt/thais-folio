@@ -33,22 +33,23 @@ function CarouselHome({ direction: externalDirection }: CarouselHomeProps) {
   const currentCategoryData = categoriesData[currentCategory];
   const [direction, setDirection] = useState(externalDirection || 0);
   const prevCategoryRef = useRef(currentCategory);
-  const [animationDistance, setAnimationDistance] = useState(1200);
-  const [verticalAnimationDistance, setVerticalAnimationDistance] =
-    useState(800);
+  const [horizontalDistance, setHorizontalDistance] = useState(1200);
+  const [verticalDistance, setVerticalDistance] = useState(800);
 
-  // Update animation distance based on screen dimensions
+  // Update animation distances based on screen dimensions
   useEffect(() => {
-    const updateAnimationDistance = () => {
-      const horizontalDistance = Math.max(window.innerWidth, 1200);
-      const verticalDistance = Math.max(window.innerHeight, 800);
-      setAnimationDistance(horizontalDistance);
-      setVerticalAnimationDistance(verticalDistance);
+    const updateAnimationDistances = () => {
+      // Use screen dimensions + 20% to ensure elements fully extend beyond viewport
+      const hDistance = Math.max(window.innerWidth * 1.2, 1200);
+      const vDistance = Math.max(window.innerHeight * 1.2, 800);
+      setHorizontalDistance(hDistance);
+      setVerticalDistance(vDistance);
     };
 
-    updateAnimationDistance();
-    window.addEventListener("resize", updateAnimationDistance);
-    return () => window.removeEventListener("resize", updateAnimationDistance);
+    updateAnimationDistances();
+
+    window.addEventListener("resize", updateAnimationDistances);
+    return () => window.removeEventListener("resize", updateAnimationDistances);
   }, []);
 
   const { currentSlide, nextSlide, prevSlide } = useCarousel({
@@ -94,11 +95,11 @@ function CarouselHome({ direction: externalDirection }: CarouselHomeProps) {
       <motion.div
         className="relative min-w-[478px] h-[790px] overflow-visible z-20"
         initial={{
-          x: effectiveDirection > 0 ? -animationDistance : animationDistance,
+          x: effectiveDirection > 0 ? -horizontalDistance : horizontalDistance,
         }}
         animate={{ x: 0 }}
         exit={{
-          x: effectiveDirection > 0 ? animationDistance : -animationDistance,
+          x: effectiveDirection > 0 ? horizontalDistance : -horizontalDistance,
         }}
         transition={{
           duration: 0.8,
@@ -120,17 +121,11 @@ function CarouselHome({ direction: externalDirection }: CarouselHomeProps) {
       <motion.div
         className="relative h-[790px] flex items-center overflow-visible z-20"
         initial={{
-          y:
-            effectiveDirection > 0
-              ? verticalAnimationDistance
-              : -verticalAnimationDistance,
+          y: effectiveDirection > 0 ? verticalDistance : -verticalDistance,
         }}
         animate={{ y: 0 }}
         exit={{
-          y:
-            effectiveDirection > 0
-              ? -verticalAnimationDistance
-              : verticalAnimationDistance,
+          y: effectiveDirection > 0 ? -verticalDistance : verticalDistance,
         }}
         transition={{
           duration: 0.8,

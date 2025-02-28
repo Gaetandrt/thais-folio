@@ -9,6 +9,10 @@ interface CarouselSlideContentProps {
   direction: number;
 }
 
+/**
+ * Carousel slide content component
+ * Displays content with smooth animations when transitioning between slides
+ */
 export function CarouselSlideContent({
   content,
   buttonText,
@@ -19,8 +23,8 @@ export function CarouselSlideContent({
   // Update animation distance based on screen height
   useEffect(() => {
     const updateAnimationDistance = () => {
-      // Use screen height + 20% to ensure element fully extends
-      const distance = Math.max(window.innerHeight, 800);
+      // Use screen height + 20% to ensure element fully extends beyond viewport
+      const distance = Math.max(window.innerHeight * 1.2, 800);
       setAnimationDistance(distance);
     };
 
@@ -49,20 +53,13 @@ export function CarouselSlideContent({
       }}
       custom={direction}
     >
-      <div className="h-[220px]">
-        <div className="flex flex-col gap-2 text-3xl">
-          {content.map((item, index) => (
-            <span key={index}>{item}</span>
-          ))}
-        </div>
-      </div>
-
+      {content.map((item, index) => (
+        <div key={index}>{item}</div>
+      ))}
       {buttonText && (
-        <div className="h-[60px]">
-          <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-default hover:border-none font-bold">
-            {buttonText} <MoveRight />
-          </Button>
-        </div>
+        <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-pointer hover:border-none font-bold w-2/3">
+          {buttonText} <MoveRight />
+        </Button>
       )}
     </motion.div>
   );
