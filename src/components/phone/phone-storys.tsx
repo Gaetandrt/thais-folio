@@ -10,7 +10,6 @@ type PhoneStoryProps = {
 function PhoneStory({ setPage }: PhoneStoryProps) {
   const { setCurrentCategory } = useCategory();
 
-  // Fonction pour changer de catégorie et naviguer vers la page des catégories
   const handleCategoryChange = (categoryIndex: number) => {
     setCurrentCategory(categoryIndex);
     setPage("categories");
@@ -22,7 +21,7 @@ function PhoneStory({ setPage }: PhoneStoryProps) {
         <Button
           variant={"outline"}
           className="rounded-full border-[1.5px] h-16 w-16"
-          onClick={() => handleCategoryChange(0)} // Présentation
+          onClick={() => handleCategoryChange(0)}
         >
           <span className="text-3xl">👋</span>
         </Button>
@@ -32,7 +31,7 @@ function PhoneStory({ setPage }: PhoneStoryProps) {
         <Button
           variant={"outline"}
           className="rounded-full border-[1.5px] h-16 w-16"
-          onClick={() => handleCategoryChange(1)} // Projets
+          onClick={() => handleCategoryChange(1)}
         >
           <span className="text-3xl">💻</span>
         </Button>
@@ -42,7 +41,7 @@ function PhoneStory({ setPage }: PhoneStoryProps) {
         <Button
           variant={"outline"}
           className="rounded-full border-[1.5px] h-16 w-16"
-          onClick={() => handleCategoryChange(2)} // Compétences
+          onClick={() => handleCategoryChange(2)}
         >
           <span className="text-3xl">🖌️</span>
         </Button>
@@ -52,7 +51,7 @@ function PhoneStory({ setPage }: PhoneStoryProps) {
         <Button
           variant={"outline"}
           className="rounded-full border-[1.5px] h-16 w-16"
-          onClick={() => handleCategoryChange(3)} // Contact
+          onClick={() => handleCategoryChange(3)}
         >
           <span className="text-3xl">📱</span>
         </Button>

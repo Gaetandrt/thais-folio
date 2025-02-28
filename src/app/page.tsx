@@ -5,17 +5,35 @@ import Home from "@/components/home";
 import Phone from "@/components/phone/phone";
 import { pageList } from "@/constant/constant";
 import { CategoryProvider } from "@/context/CategoryContext";
+import { AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function page() {
+/**
+ * Main application page that manages content display based on state
+ * Uses AnimatePresence to create smooth transitions between components
+ */
+export default function Page() {
   const [page, setPage] = useState<(typeof pageList)[number]>("home");
+  const [direction, setDirection] = useState(0);
+
+  // Change page with direction for animations
+  const changePage = (newPage: (typeof pageList)[number]) => {
+    // Determine animation direction based on page change
+    if (newPage === "home" && page === "contact") setDirection(-1);
+    else if (newPage === "contact" && page === "home") setDirection(1);
+    else if (newPage === "categories") setDirection(1);
+    else if (page === "categories") setDirection(-1);
+    else setDirection(0);
+
+    setPage(newPage);
+  };
 
   return (
     <CategoryProvider>
       <div className="w-full h-screen">
         <main className="relative flex items-center gap-32 h-screen w-full 2xl:p-32 p-10">
-          {/* Banderole défilante */}
+          {/* Scrolling banner */}
           <div className="absolute bottom-1/4 left-0 right-0 w-full overflow-hidden -z-10">
             <div className="whitespace-nowrap animate-marquee flex items-center">
               {Array(10)
@@ -44,11 +62,18 @@ export default function page() {
             </div>
           </div>
 
-          {page === "home" && <Home />}
-          {page === "contact" && <Contact />}
-          {page === "categories" && <CarouselHome />}
+          <AnimatePresence mode="wait" initial={false} custom={direction}>
+            {page === "home" && <Home key="home" direction={direction} />}
+            {page === "contact" && (
+              <Contact key="contact" direction={direction} />
+            )}
+            {page === "categories" && (
+              <CarouselHome key="categories" direction={direction} />
+            )}
+          </AnimatePresence>
+
           <div className="relative w-3/5 h-3/4">
-            <Phone setPage={setPage} page={page} />
+            <Phone setPage={changePage} page={page} />
           </div>
         </main>
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">

@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 function PhonePosts() {
-  // Tableau des titres pour chaque intérêt
   const interestTitles = [
     {
       title: "COURSE À PIED",
@@ -47,7 +46,6 @@ function PhonePosts() {
               className="object-cover transition-all duration-300 group-hover:brightness-50"
               sizes="(max-width: 768px) 33vw, 20vw"
             />
-            {/* Overlay avec texte qui apparaît au survol */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <p className="text-sm font-bold tracking-wider text-center">
                 {post.title}

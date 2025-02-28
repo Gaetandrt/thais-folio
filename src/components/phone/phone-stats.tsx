@@ -10,14 +10,11 @@ type PhoneStatsProps = {
 function PhoneStats({ setPage, page }: PhoneStatsProps) {
   return (
     <>
-      {/* Header du profil avec nom d'utilisateur */}
       <div className="flex items-center justify-center">
         <h2 className="text-lg font-semibold">thaïsbouzar</h2>
       </div>
 
-      {/* Section profil avec photo et statistiques */}
       <div className="flex items-center">
-        {/* Photo de profil */}
         <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-pink-500/50 p-[2px]">
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
@@ -33,7 +30,6 @@ function PhoneStats({ setPage, page }: PhoneStatsProps) {
           </div>
         </div>
 
-        {/* Statistiques */}
         <div className="flex flex-1 justify-around ml-4">
           <div className="flex flex-col items-center">
             <span className="font-bold text-base">127</span>
