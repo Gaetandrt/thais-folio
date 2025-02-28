@@ -31,8 +31,8 @@ function Home() {
             </span>
           </p>
         </div>
-        <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-pointer hover:from-[#3a8dfa] hover:to-[#8629ff] font-bold">
-          Utilises mon smartphone ! <MoveRight />
+        <Button className="gap-2 bg-gradient-to-r from-[#529AFA] to-[#9747FF] cursor-default hover:border-none font-bold">
+          UTILISES MON SMARTPHONE ! <MoveRight />
         </Button>
       </div>
     </div>
