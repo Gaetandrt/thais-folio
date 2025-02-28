@@ -21,7 +21,7 @@ function CarouselHome() {
   const { currentCategory } = useCategory();
 
   // État local pour la slide actuelle
-  const [currentSlide, setCurrentSlide] = useState(4);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   // Navigation entre les slides
   const nextSlide = () => {
