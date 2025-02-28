@@ -6,39 +6,54 @@ export const designData: CategoryData = {
   slides: [
     {
       id: 1,
-      image: "/portfolio/contact.jpg",
-      title: "CONTACTEZ-MOI",
+      image: "/showcase/design/design-zoe.png",
+      title: "",
       subtitle: [
-        <>
-          Disponible pour{" "}
-          <span className="bg-gradient-to-r from-[#A239CA] to-[#4717F6] bg-clip-text text-transparent font-bold font-stretch-50% text-4xl">
-            COLLABORATIONS
-          </span>
-        </>,
-        <>
-          Basée à{" "}
-          <span className="font-bold font-stretch-50% text-4xl">PARIS</span>
-        </>,
+        <h2 className="text-4xl font-bold font-stretch-50%">GLACIER ZOÉ</h2>,
+        <p>Projet fictif</p>,
       ],
-      buttonText: "ENVOYER UN MESSAGE",
     },
     {
       id: 2,
-      image: "/portfolio/social.jpg",
-      title: "RÉSEAUX SOCIAUX",
+      image: "/showcase/design/design-zoe-2.png",
+      title: "",
       subtitle: [
-        <>
-          Suivez-moi sur{" "}
-          <span className="bg-gradient-to-r from-[#A239CA] to-[#4717F6] bg-clip-text text-transparent font-bold font-stretch-50% text-4xl">
-            INSTAGRAM
-          </span>
-        </>,
-        <>
-          Et{" "}
-          <span className="font-bold font-stretch-50% text-4xl">LINKEDIN</span>
-        </>,
+        <h2 className="text-4xl font-bold font-stretch-50%">GLACIER ZOÉ</h2>,
+        <p>Projet fictif</p>,
       ],
-      buttonText: "MES PROFILS",
+    },
+    {
+      id: 3,
+      image: "/showcase/design/design-mc-gordes.png",
+      title: "",
+      subtitle: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          MC GORDES - <span className="font-light">LOGO</span>
+        </h2>,
+        <p>Club de moto à Gordes</p>,
+      ],
+    },
+    {
+      id: 4,
+      image: "/showcase/design/design-mc-gordes-mob.png",
+      title: "",
+      subtitle: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          MC GORDES - <span className="font-light">AFFICHE</span>
+        </h2>,
+        <p>Club de moto à Gordes</p>,
+      ],
+    },
+    {
+      id: 5,
+      image: "/showcase/design/design-mc-gordes-training.png",
+      title: "",
+      subtitle: [
+        <h2 className="text-4xl font-bold font-stretch-50%">
+          MC GORDES - <span className="font-light">AFFICHE</span>
+        </h2>,
+        <p>Club de moto à Gordes</p>,
+      ],
     },
   ],
 };
